@@ -1,5 +1,4 @@
 import * as THREE from './libs/three.module.js';
-import {lavaGround} from './loader.js';
 import {SpikeBall} from './loader.js';
 import {Star} from './loader.js';
 import {Heart} from './loader.js';

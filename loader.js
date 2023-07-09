@@ -39,51 +39,6 @@ export const Head = {
 
 }
 
-export const lavaGround={
-    loader: new GLTFLoader(),
-
-    gltfHref: './assets/lava-2/scene.gltf',
-
-    onLoadFunction: function(gltf){
-
-        scene.add(gltf.scene);
-
-        gltf.animations; 
-        gltf.scene; 
-        gltf.scenes; 
-        gltf.cameras; 
-        gltf.asset; 
-
-    },
-
-    onProgressFunction: function(xhr){
-
-    },
-
-    load: function(scene){
-
-        var textureLoader = new THREE.TextureLoader();
-        var texture = textureLoader.load('./assets/lava-2/textures/Material_26_baseColor.png' );
-        var roughTexture = textureLoader.load('./assets/lava-2/textures/Material_26_metallicRoughness.png');
-        texture.flipY = false;
-
-        this.loader.load( this.gltfHref, (gltf)=>{
-            scene.add(gltf.scene);
-            gltf.scene.scale.set(0.6,0.6,0.6);
-            gltf.scene.position.y+=700;
-            var model = gltf.scene;
-            model.traverse ( ( o ) => {
-                if ( o.isMesh ) {
-                    o.material.map = texture;
-                    o.material.normalMap = roughTexture;
-                }
-            });
-
-        }, this.onProgressFunction );
-    }
-
-}
-
 export class SpikeBall{
     constructor(params){
 
