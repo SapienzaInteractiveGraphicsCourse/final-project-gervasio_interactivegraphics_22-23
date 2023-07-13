@@ -4,7 +4,7 @@
 o 
 
 # material
-mtllib spikeball.mtl
+mtllib chainsaw.mtl
 usemtl palette
 
 # normals

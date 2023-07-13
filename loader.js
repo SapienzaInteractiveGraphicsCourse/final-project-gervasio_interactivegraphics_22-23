@@ -39,13 +39,13 @@ export const Head = {
 
 }
 
-export class SpikeBall{
+export class chainSaw{
     constructor(params){
 
         this.mesh=params.scene;
         this.manager=new THREE.LoadingManager();
-        this.objHref= './assets/spikeBall/spikeball.obj';
-        this.mtlHref= './assets/spikeBall/spikeball.mtl';
+        this.objHref= './assets/chainsaw/chainsaw.obj';
+        this.mtlHref= './assets/chainsaw/chainsaw.mtl';
         this.obj=0;
 
     }

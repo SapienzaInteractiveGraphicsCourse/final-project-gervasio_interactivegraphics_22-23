@@ -6,7 +6,7 @@ const Center=2;
 
 const STAR=0;
 const HEART=1;
-const SPIKEBALL=2;
+const CHAINSAW=2;
 
 let score=0;
 let totalHearts=0;
@@ -121,8 +121,8 @@ export class CollisionsDetector{
                         if(!(id in this.detected)){
 
                             switch(type){
-                                case SPIKEBALL:
-                                    this.detected[id]=SPIKEBALL;
+                                case CHAINSAW:
+                                    this.detected[id]=CHAINSAW;
                                     collisionDetected=true;
                                     this.invulnerableFlag=true;
                                     if(actualHearts>0){
@@ -187,8 +187,8 @@ export class CollisionsDetector{
                         if(!(id in this.detected)){
 
                             switch(type){
-                                case SPIKEBALL:
-                                    this.detected[id]=SPIKEBALL;
+                                case CHAINSAW:
+                                    this.detected[id]=CHAINSAW;
                                     collisionDetected=true;
                                     this.invulnerableFlag=true;
                                     if(actualHearts>0){
@@ -251,8 +251,8 @@ export class CollisionsDetector{
 
                         if(!(id in this.detected)){
                             switch(type){
-                                case SPIKEBALL:
-                                    this.detected[id]=SPIKEBALL;
+                                case CHAINSAW:
+                                    this.detected[id]=CHAINSAW;
                                     collisionDetected=true;
                                     this.invulnerableFlag=true;
                                     if(actualHearts>0){

@@ -1,5 +1,5 @@
 import * as THREE from './libs/three.module.js';
-import {SpikeBall} from './loader.js';
+import {chainSaw} from './loader.js';
 import {Star} from './loader.js';
 import {Heart} from './loader.js';
 import {Rock} from './loader.js';
@@ -33,7 +33,7 @@ const BRIDGE_DEPTH = 106;
 
 const STAR = 0;
 const HEART = 1;
-const SPIKEBALL = 2;
+const CHAINSAW = 2;
 
 
 
@@ -53,8 +53,8 @@ class WorldObject {
 
         let value = Math.random();
         if (value <= 0.55) {
-            this.type = SPIKEBALL;
-            this.spawnSpikeBall();
+            this.type = CHAINSAW;
+            this.spawnChainsaw();
         } else if (value <= 0.85) {
             this.type = STAR;
             this.spawnStar();
@@ -75,11 +75,11 @@ class WorldObject {
         this.heart.load();
     }
 
-    spawnSpikeBall() {
-        this.spikeBall = new SpikeBall({
+    spawnChainsaw() {
+        this.chainsaw = new chainSaw({
             scene: this.mesh
         });
-        this.spikeBall.load();
+        this.chainsaw.load();
     }
 
     spawnStar() {
