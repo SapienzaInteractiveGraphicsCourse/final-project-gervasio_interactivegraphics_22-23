@@ -59,12 +59,11 @@ export class SpikeBall{
         mtlLoader.load(this.mtlHref, (mtl) => {
             mtl.preload();
             const objLoader = new OBJLoader(this.manager);
-			for (const material of Object.values(mtl.materials)) {
-				material.color=new THREE.Color(0x202020);
-				material.reflectivity=0.1;
-				material.specular=new THREE.Color(0x928D8D);
-
-   			}
+	    for (const material of Object.values(mtl.materials)) {
+		material.color=new THREE.Color(0x202020);
+		material.reflectivity=0.1;
+	  	material.specular=new THREE.Color(0x928D8D);
+	    }
             objLoader.setMaterials(mtl);
             objLoader.load(this.objHref, (object) => {
                 object.scale.set(0.7,0.6,0.7);
@@ -77,11 +76,11 @@ export class SpikeBall{
                 this.mesh.add(pivot);
 
                 let tween1=new TWEEN.Tween(object.rotation)
-                .to({x:Math.PI},500)
+                .to({y:Math.PI},500)
                 .easing(TWEEN.Easing.Linear.None)
                 .repeat(Infinity)
                 .onUpdate((tweenObj)=>{
-                    object.rotation.x+=tweenObj.x;
+                    object.rotation.y+=tweenObj.y;
                 })
                 .start();
             });

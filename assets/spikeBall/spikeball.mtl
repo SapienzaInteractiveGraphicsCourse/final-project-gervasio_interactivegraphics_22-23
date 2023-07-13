@@ -1,12 +1,8 @@
-# Blender MTL File: 'spikeball.blend2.blend'
-# Material Count: 1
+# MagicaVoxel @ Ephtracy
 
-newmtl Material
-Ns 0.000000
-Ka 0.470149 0.470149 0.470149
-Kd 0.005919 0.110689 0.000000
-Ks 0.156716 0.156716 0.156716
-Ke 0.000000 0.000000 0.000000
-Ni 1.000000
-d 1.000000
-illum 3
+newmtl palette
+illum 1
+Ka 0.000 0.000 0.000
+Kd 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd spikeball.png
