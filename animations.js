@@ -212,7 +212,6 @@ export class AnimationManager{
         {x: 0}, {x: 0}, {x: 0}, {x: 0}, {x: 0}, {x: 0}], 150)
         .easing(TWEEN.Easing.Linear.None)
         .onComplete(()=>{
-            //console.log(this.jumpingFlag);
             this.jumpingFlag=false;
         });
 
@@ -296,7 +295,7 @@ export class AnimationManager{
                                 this.leftFeetRoot.rotation,
                                 this.rightFeetRoot.rotation,
                             ])
-        .to([//{y: -Math.PI/26},
+        .to([
             {x: -Math.PI/6},{x:-Math.PI/5},
             {x: Math.PI/2},{x: -Math.PI/4},
             {x: -Math.PI/6}, {x: 0},
@@ -316,7 +315,7 @@ export class AnimationManager{
                                 this.leftFeetRoot.rotation,
                                 this.rightFeetRoot.rotation,
                             ])
-        .to([//{y: Math.PI/26},
+        .to([
             {x: -Math.PI/5},{x: -Math.PI/6},
             {x: -Math.PI/6},{x: 0},
              {x: Math.PI/2}, {x: -Math.PI/4},

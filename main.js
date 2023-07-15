@@ -4,7 +4,6 @@ import {WorldManager} from './world.js';
 import {CollisionsDetector} from './collisions.js'
 import {AnimationManager} from './animations.js'
 import{ControlManager} from './controls.js'
-//import {loadingManager} from './loader.js'
 import Stats from './libs/stats.module.js'
 import * as GUI from './libs/dat.gui.module.js'
 import {OrbitControls} from './libs/OrbitControls.js'
